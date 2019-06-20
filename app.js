@@ -43,12 +43,19 @@ if (!isProduction) {
 console.log("connect to mongoose...");
 
 if(isProduction){
+
   console.log("connect to atlas...");
   mongoose.connect(process.env.MONGODB_URI);
+
 } else {
-  console.log("connect to local...");
-  mongoose.connect('mongodb://localhost/conduit');
-  mongoose.set('debug', true);
+
+  console.log("connect to atlas...");
+  mongoose.connect(process.env.MONGODB_URI);
+
+//  console.log("connect to local...");
+//  mongoose.connect('mongodb://localhost/conduit');
+//  mongoose.set('debug', true);
+
 }
 
 require('./models/User');
