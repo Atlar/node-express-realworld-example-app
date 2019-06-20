@@ -1,3 +1,5 @@
+console.log("start importing...");
+
 var http = require('http'),
     path = require('path'),
     methods = require('methods'),
@@ -9,10 +11,16 @@ var http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
+console.log("finished importing...");
+console.log("starting express...");
+
 var isProduction = process.env.NODE_ENV === 'production';
 
 // Create global app object
 var app = express();
+
+console.log("express have been started...");
+console.log("adding middleware...");
 
 app.use(cors());
 
@@ -26,13 +34,19 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(session({ secret: 'conduit', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false  }));
 
+console.log("base middleware have been added...");
+
 if (!isProduction) {
   app.use(errorhandler());
 }
 
+console.log("connect to mongoose...");
+
 if(isProduction){
+  console.log("connect to atlas...");
   mongoose.connect(process.env.MONGODB_URI);
 } else {
+  console.log("connect to local...");
   mongoose.connect('mongodb://localhost/conduit');
   mongoose.set('debug', true);
 }
