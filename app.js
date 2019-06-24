@@ -66,6 +66,7 @@ require('./config/passport');
 app.use(require('./routes'));
 
 app.get('/', function(req, res) {
+    console.log("giving file...");
     res.sendFile(path.join(__dirname + '/public/react_frontend/public/index.html'));
 });
 
