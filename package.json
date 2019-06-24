@@ -14,7 +14,13 @@
     "test": "newman run ./tests/api-tests.postman.json -e ./tests/env-api-tests.postman.json",
     "stop": "lsof -ti :3000 | xargs kill",
     "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
+    "start-public": "react-scripts start",
+    "build": "react-scripts build",
+    "test-public": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
