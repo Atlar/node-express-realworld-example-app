@@ -40,7 +40,12 @@
     "request": "2.69.0",
     "slug": "0.9.1",
     "underscore": "1.8.3",
-    "webpack": "4.34.0"
+    "webpack": "4.34.0",
+
+ 
+ 
+
+    
   },
   "devDependencies": {
     "newman": "^3.8.2",
