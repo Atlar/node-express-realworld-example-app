@@ -21,6 +21,10 @@
     "url": "git+https://github.com/gothinkster/productionready-node-api.git"
   },
   "license": "ISC",
+  "devDependencies": {
+    "custom-react-scripts": "0.2.0",
+    "gh-pages": "^1.0.0"
+  },
   "dependencies": {
     "body-parser": "1.15.0",
     "cors": "2.7.1",
@@ -40,7 +44,7 @@
     "request": "2.69.0",
     "slug": "0.9.1",
     "underscore": "1.8.3",
-    "webpack": "4.34.0",
+    "webpack": "4.34.0",
     "history": "4.7.2",
     "marked": "^0.3.6",
     "mobx": "^3.2.2",
