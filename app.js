@@ -99,6 +99,10 @@ app.use(function(err, req, res, next) {
   }});
 });
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/public/react_frontend/public/index.html'));
+});
+
 // finally, let's start our server...
 var server = app.listen( process.env.PORT || 3000, function(){
   console.log('Listening on port ' + server.address().port);
