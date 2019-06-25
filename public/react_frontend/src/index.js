@@ -42,6 +42,8 @@ window._____APP_STATE_____ = stores;
 window.alert("window state" );
 
 promiseFinally.shim();
+
+window.alert("shimmed... strangely" );
 useStrict(true);
 
 console.log("rendering react...");
