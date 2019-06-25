@@ -1,4 +1,5 @@
 console.log("start react import...");
+document.getElementById("console").innerHTML = 'start import';
 
 import ReactDOM from 'react-dom';
 import promiseFinally from 'promise.prototype.finally';
@@ -18,6 +19,7 @@ import userStore from './stores/userStore';
 import profileStore from './stores/profileStore';
 
 console.log("finished importing...");
+document.getElementById("console").innerHTML = 'finish import';
 
 const stores = {
   articlesStore,
@@ -36,6 +38,7 @@ promiseFinally.shim();
 useStrict(true);
 
 console.log("rendering react...");
+document.getElementById("console").innerHTML = 'react render';
 
 ReactDOM.render((
   <Provider {...stores}>
@@ -44,3 +47,5 @@ ReactDOM.render((
     </HashRouter>
   </Provider>
 ), document.getElementById('root'));
+
+document.getElementById("console").innerHTML = 'finish';
