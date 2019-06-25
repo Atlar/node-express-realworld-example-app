@@ -1,5 +1,6 @@
 console.log("start react import...");
 document.getElementById("console").innerHTML = 'start import';
+window.alert("start client script" );
 
 import ReactDOM from 'react-dom';
 import promiseFinally from 'promise.prototype.finally';
@@ -17,6 +18,9 @@ import commonStore from './stores/commonStore';
 import editorStore from './stores/editorStore';
 import userStore from './stores/userStore';
 import profileStore from './stores/profileStore';
+
+window.alert("finish import" );
+
 
 console.log("finished importing...");
 document.getElementById("console").innerHTML = 'finish import';
