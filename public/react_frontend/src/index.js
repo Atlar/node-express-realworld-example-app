@@ -35,14 +35,19 @@ const stores = {
   profileStore,
 };
 
+window.alert("store constructed" );
 // For easier debugging
 window._____APP_STATE_____ = stores;
+
+window.alert("window state" );
 
 promiseFinally.shim();
 useStrict(true);
 
 console.log("rendering react...");
 document.getElementById("console").innerHTML = 'react render';
+
+window.alert("start render" );
 
 ReactDOM.render((
   <Provider {...stores}>
