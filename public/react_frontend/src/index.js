@@ -1,6 +1,4 @@
-console.log("start react import...");
-document.getElementById("console").innerHTML = 'start import';
-window.alert("start client script" );
+
 
 import ReactDOM from 'react-dom';
 import promiseFinally from 'promise.prototype.finally';
@@ -19,11 +17,7 @@ import editorStore from './stores/editorStore';
 import userStore from './stores/userStore';
 import profileStore from './stores/profileStore';
 
-window.alert("finish import" );
-
-
-console.log("finished importing...");
-document.getElementById("console").innerHTML = 'finish import';
+ 
 
 const stores = {
   articlesStore,
@@ -35,19 +29,17 @@ const stores = {
   profileStore,
 };
 
-window.alert("store constructed" );
+
 // For easier debugging
 window._____APP_STATE_____ = stores;
 
-window.alert("window state" );
+
 
 promiseFinally.shim();
 
-window.alert("shimmed... strangely" );
-useStrict(true);
+//window.alert("shimmed... strangely" );
+//useStrict(true);
 
-console.log("rendering react...");
-document.getElementById("console").innerHTML = 'react render';
 
 window.alert("start render" );
 
