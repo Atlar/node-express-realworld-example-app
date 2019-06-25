@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "conduit on node",
   "engines": {
-    "node": "10.3.0", 
+    "node": "10.3.0",
     "npm": "6.x"
   },
   "main": "app.js",
@@ -16,11 +16,13 @@
     "mongo:stop": "docker stop realworld-mongo && docker rm realworld-mongo",
     "heroku-postbuild": "webpack -p",
     "start-public": "react-scripts start",
-    "build": "react-scripts build",
+    "build_old": "react-scripts build",
     "test-public": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "devweb":"webpack",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -58,12 +60,12 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "4.2.2",
     "superagent": "^3.6.0",
-    "superagent-promise": "^1.1.0"    
+    "superagent-promise": "^1.1.0"
   },
   "devDependencies": {
     "newman": "^3.8.2",
     "nodemon": "^1.11.0",
     "custom-react-scripts": "0.2.0",
     "gh-pages": "^1.0.0"
-}
+  }
 }
