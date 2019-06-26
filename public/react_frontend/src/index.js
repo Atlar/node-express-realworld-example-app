@@ -16,7 +16,6 @@ import commonStore from './stores/commonStore';
 import editorStore from './stores/editorStore';
 import userStore from './stores/userStore';
 import profileStore from './stores/profileStore';
-
  
 
 const stores = {
@@ -33,15 +32,8 @@ const stores = {
 // For easier debugging
 window._____APP_STATE_____ = stores;
 
-
-
 promiseFinally.shim();
-
-//window.alert("shimmed... strangely" );
-//useStrict(true);
-
-
-window.alert("start render" );
+useStrict(true);
 
 ReactDOM.render((
   <Provider {...stores}>
