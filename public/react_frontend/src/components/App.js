@@ -33,7 +33,7 @@ export default class App extends React.Component {
 
   render() {
     window.alert("rendering" );
-    if (1||this.props.commonStore.appLoaded) {
+    if (this.props.commonStore.appLoaded) {
       return (
         <div>
           <Header />
